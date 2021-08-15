@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        vertical-align: middle;
+        border-top: 1px solid @table-border-color;
+      }
+    }
+  }
+  > thead > tr > th {
+    border-bottom: 2px solid @table-border-color;
+  }
+  > tbody + tbody {
+    border-top: 2px solid @table-border-color;
+  }
+}
+.table-bordered {
+  border: 1px solid @table-border-color;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 1px solid @table-border-color;
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 2px;
+    }
+  }
+}
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: @table-bg-accent;
+  }
+}
+.table-hover {
+  > tbody > tr:hover {
+    background-color: @table-bg-hover;
+  }
+}
+.table-responsive {
+  @media screen and (max-width: @screen-xs-max) {
+    border: 1px solid @table-border-color;
+  }
+}
+.dark-layout {
+  caption {
+    color: #ddd;
+  }
+  .table {
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border-top: 1px solid @table-border-color-dark;
+        }
+      }
+    }
+    > thead > tr > th {
+      border-bottom: 2px solid @table-border-color-dark;
+    }
+    > tbody + tbody {
+      border-top: 2px solid @table-border-color-dark;
+    }
+  }
+  .table-bordered {
+    border: 1px solid @table-border-color-dark;
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border: 1px solid @table-border-color-dark;
+        }
+      }
+    }
+    > thead > tr {
+      > th,
+      > td {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+  .table-striped {
+    > tbody > tr:nth-of-type(odd) {
+      background-color: @table-bg-accent-dark;
+    }
+  }
+  .table-hover {
+    > tbody > tr:hover {
+      background-color: @table-bg-hover-dark;
+    }
+  }
+  .table-responsive {
+    @media screen and (max-width: @screen-xs-max) {
+      border: 1px solid @table-border-color-dark;
+    }
+  }
+}
+.table.table-primary {
+  background: @primary-color;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        color: #fff;
+        border-top: 1px solid shade(@primary-color, 10%);
+      }
+    }
+  }
+  > thead > tr > th {
+    border-bottom: 2px solid shade(@primary-color, 10%);
+  }
+  > tbody + tbody {
+    border-top: 2px solid shade(@primary-color, 10%);
+  }
+  &.table-bordered {
+    border: 1px solid shade(@primary-color, 10%);
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border: 1px solid shade(@primary-color, 10%);
+        }
+      }
+    }
+    > thead > tr {
+      > th,
+      > td {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+  &.table-striped {
+    > thead,
+    > tfoot {
+      background: #555;
+      th {
+        padding-top: 18px;
+        padding-bottom: 18px;
+      }
+    }
+    > tbody > tr:nth-of-type(odd) {
+      background-color: shade(@primary-color, 10%);
+    }
+  }
+  &.table-hover {
+    > tbody > tr:hover {
+      background-color: #555;
+    }
+  }
+}
+.table.table-primary-border {
+  > thead > tr > th {
+    border-bottom: 2px solid @primary-color;
+  }
+}
+.table-lg {
+  caption {
+    padding-top: @table-cell-padding-lg;
+    padding-bottom: @table-cell-padding-lg;
+  }
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-cell-padding-lg;
+      }
+    }
+  }
+}
+@-moz-document url-prefix() {
+  fieldset {
+    display: table-cell;
+  }
+}

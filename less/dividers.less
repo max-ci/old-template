@@ -1,0 +1,302 @@
+/* ==========================================================================
+   Dividers
+   ========================================================================== */
+
+/* Basic styles
+   ========================================================================== */
+
+.hr {
+  overflow: hidden;
+  margin: 20px 0;
+}
+.dark-layout hr {
+  border-top: 1px solid #555;
+}
+
+/* Single/double/gradient line
+   ========================================================================== */
+
+.hr-single-line {
+  height: 1px;
+  background: #e8e8e8;
+}
+.hr-single-line-dark {
+  background: #555;
+}
+.hr-single-line-primary {
+  background: @primary-color;
+}
+.dark-layout .hr-single-line {
+  background: #555;
+}
+.hr-double-line {
+  padding: 3px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.dark-layout .hr-double-line {
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+.hr-double-line-dark {
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+.hr-double-line-primary {
+  border-top: 1px solid @primary-color;
+  border-bottom: 1px solid @primary-color;
+}
+.hr-gradient-line {
+  height: 1px;
+  border: none;
+  background: #e5e5e5;
+  background: -webkit-linear-gradient(to right, transparent, rgba(0, 0, 0, .12), transparent);
+  background:         linear-gradient(to right, transparent, rgba(0, 0, 0, .12), transparent);
+}
+.dark-layout .hr-gradient-line {
+  background: #555;
+  background: -webkit-linear-gradient(to right, transparent, rgba(255, 255, 255, .15), transparent);
+  background:         linear-gradient(to right, transparent, rgba(255, 255, 255, .15), transparent);
+}
+
+/* Short line
+   ========================================================================== */
+
+.hr-line {
+  position: relative;
+  width: 50px;
+  height: 1px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #e8e8e8;
+  &.hr-line-dark {
+    background: #555;
+  }
+  &.hr-line-primary {
+    background: @primary-color;
+  }
+  &.hr-line-left {
+    margin-left: 0;
+  }
+  &.hr-line-right {
+    margin-right: 0;
+  }
+}
+.dark-layout .hr-line {
+  background: #555;
+}
+.hr-line-long {
+  width: 250px;
+}
+
+/* Single/double line with content
+   ========================================================================== */
+
+.single-line-content,
+.double-line-content {
+  position: relative;
+  overflow: hidden;
+  > span {
+    position: relative;
+    display: inline-block;
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 9999px;
+      height: 1px;
+      content: '';
+      background: #e8e8e8;
+    }
+    &:before {
+      right: 100%;
+      margin-right: 20px;
+    }
+    &:after {
+      left: 100%;
+      margin-left: 20px;
+    }
+    > img {
+      width: 60px;
+    }
+  }
+}
+.double-line-content {
+  span {
+    &:before,
+    &:after {
+      top: 50%;
+      margin-top: -3px;
+      padding: 3px 0;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      background: none;
+    }
+  }
+}
+.dark-layout .single-line-content > span:before,
+.dark-layout .single-line-content > span:after {
+  background: #555;
+}
+.dark-layout .double-line-content > span:before,
+.dark-layout .double-line-content > span:after {
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+/* Icon divider
+   ========================================================================== */
+
+.icon-divider {
+  position: relative;
+  z-index: 10;
+  &:before {
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    content: '';
+    border: 2px solid #eee;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+.dark-layout .icon-divider {
+  border-top-color: #555;
+  &:before {
+    border: 2px solid #555;
+    background: #333;
+  }
+}
+.hr-icon {
+  font-size: 16px;
+  line-height: 40px;
+  position: absolute;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  text-align: center;
+  color: #777;
+  border: none;
+  border-radius: 50%;
+  background: #e8e8e8;
+}
+.dark-layout .hr-icon {
+  color: #ddd;
+  background: #555;
+}
+.icon-divider-dark {
+  &:before {
+    border: 2px solid #555;
+    background: #fff;
+  }
+  .hr-icon {
+    background: #555;
+    color: #ddd;
+  }
+}
+.icon-divider-primary {
+  &:before {
+    border: 2px solid @primary-color;
+    background: #fff;
+  }
+  .hr-icon {
+    background: @primary-color;
+    color: #fff;
+  }
+}
+.icon-divider-with-line {
+  margin: 100px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Line with circles
+   ========================================================================== */
+
+.hr-circles,
+.hr-circle-left,
+.hr-circle-right,
+.hr-circle-center {
+  position: relative;
+  height: 1px;
+  background: #e5e5e5;
+}
+.dark-layout .hr-circles,
+.dark-layout .hr-circle-left,
+.dark-layout .hr-circle-right,
+.dark-layout .hr-circle-center {
+  background: #555;
+}
+.hr-circles:before,
+.hr-circles:after,
+.hr-circle-left:before,
+.hr-circle-right:before,
+.hr-circle-center:before {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  margin-top: -5px;
+  content: '';
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  background: #fff;
+}
+.hr-circles:after {
+  right: 0;
+  left: auto;
+}
+.hr-circle-right:before {
+  right: 0;
+  left: auto;
+}
+.hr-circle-center:before {
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+  content: '';
+}
+.dark-layout .hr-circles:before,
+.dark-layout .hr-circles:after,
+.dark-layout .hr-circle-left:before,
+.dark-layout .hr-circle-right:before {
+  border: 1px solid #666;
+  background: #333;
+}
+.dark-layout .hr-circle-center:before {
+  border: 1px solid #555;
+  background: #333;
+}
+.hr-circles-short {
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.hr-circles-short-left {
+  margin-left: 0;
+}
+.hr-circles-short-right {
+  margin-right: 0;
+}
+
+/* PNG dividers
+   ========================================================================== */
+
+.divider-v1 {
+  width: 100%;
+  height: 9px;
+  background: url('../images/dividers/divider1.png') repeat-x;
+}
+.divider-v2 {
+  width: 100%;
+  height: 5px;
+  background: url('../images/dividers/divider2.png') repeat-x;
+}
+

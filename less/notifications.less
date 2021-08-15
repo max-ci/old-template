@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Alerts
+   ========================================================================== */
+
+
+
+/* Basic styles
+   ========================================================================== */
+
+.alert {
+  position: relative;
+  margin-bottom: @line-height-computed;
+  padding: @alert-padding;
+  border: none; // 1px solid transparent ?
+  border-radius: @alert-border-radius;
+  .alert-link {
+    font-weight: @alert-link-font-weight;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+  }
+}
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: (@alert-padding + 20);
+  .close {
+    font-size: 15px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+}
+.alert-success {
+  color: #fff;
+  background-color: @alert-success-bg;
+  hr {
+    border-top-color: tint(@alert-success-bg, 20%);
+  }
+  .alert-link {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+}
+.alert-info {
+  color: #fff;
+  background-color: @alert-info-bg;
+  hr {
+    border-top-color: tint(@alert-info-bg, 20%);
+  }
+  .alert-link {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+}
+.alert-warning {
+  color: #666;
+  background-color: @alert-warning-bg;
+  hr {
+    border-top-color: shade(@alert-warning-bg, 10%);
+  }
+  .alert-link {
+    color: #666;
+    border-bottom-color: #666;
+  }
+}
+.alert-danger {
+  color: #fff;
+  background-color: @alert-danger-bg;
+  hr {
+    border-top-color: tint(@alert-danger-bg, 20%);
+  }
+  .alert-link {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+}
+
+/* Custom alerts
+   ========================================================================== */
+
+.alert-icon {
+  margin-right: 8px;
+}
+.alert-light {
+  color: #666;
+  border: 1px solid #eee;
+  background-color: #f5f5f5;
+  hr {
+    border-top-color: #eee;
+  }
+  .alert-link {
+    color: #666;
+    border-bottom-color: #666;
+  }
+}
+.alert-dark {
+  color: #fff;
+  border: 1px solid #555;
+  background-color: #444;
+  hr {
+    border-top-color: #555;
+  }
+  .alert-link {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+}
+.alert-v1 {
+  padding-left: 78px;
+  .alert-icon {
+    line-height: 58px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 58px;
+    height: 100%;
+    text-align: center;
+  }
+  &.alert-light {
+    .alert-icon {
+      background: #eee;
+    }
+  }
+  &.alert-dark {
+    .alert-icon {
+      background: #555;
+    }
+  }
+  &.alert-success {
+    .alert-icon {
+      background: shade(@alert-success-bg, 15%);
+    }
+  }
+  &.alert-info {
+    .alert-icon {
+      background: shade(@alert-info-bg, 15%);
+    }
+  }
+  &.alert-warning {
+    .alert-icon {
+      color: #fff;
+      background: shade(@alert-warning-bg, 20%);
+    }
+  }
+  &.alert-danger {
+    .alert-icon {
+      background: shade(@alert-danger-bg, 15%);
+    }
+  }
+}
+.alert-border-bottom {
+  border-bottom: 3px solid transparent;
+  &.alert-light {
+    border: none;
+    border-bottom: 3px solid #ddd;
+  }
+  &.alert-dark {
+    border: none;
+    border-bottom: 3px solid #333;
+  }
+  &.alert-success {
+    border-color: shade(@alert-success-bg, 30%);
+  }
+  &.alert-info {
+    border-color: shade(@alert-info-bg, 30%);
+  }
+  &.alert-warning {
+    border-color: shade(@alert-warning-bg, 35%);
+  }
+  &.alert-danger {
+    border-color: shade(@alert-danger-bg, 30%);
+  }
+}
+
+/* Fixed alerts
+   ========================================================================== */
+
+.alert.alert-fixed-top,
+.alert.alert-fixed-bottom {
+  position: fixed;
+  z-index: 1035;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  opacity: .95;
+  border-radius: 0;
+}
+.alert-fixed-top {
+  top: 0;
+}
+.alert-fixed-bottom {
+  bottom: 0;
+}
+.alert-desc {
+  margin-bottom: 10px;
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .alert-fixed-top,
+  .alert-fixed-bottom {
+    text-align: left;
+  }
+  .alert-close {
+    float: right;
+  }
+  .alert-desc {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+}

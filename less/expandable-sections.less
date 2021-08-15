@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Expandable sections
+   ========================================================================== */
+
+.expandable {
+	background: #ddd;
+	color: #666;
+	padding: 40px 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	&:hover,
+	&:focus {
+		color: #666;
+	}
+	i {
+		display: block;
+	}
+	&[aria-expanded="true"] i {
+		transform: rotate(180deg);
+	}
+}
+.expandable-dark {
+	background: #333;
+	color: #ddd;
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+}
+.expandable-primary {
+	background: @primary-color;
+	color: #fff;
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+}
+
+

@@ -1,0 +1,185 @@
+/* Page sections
+   ========================================================================== */
+
+.page-sections-wrapper {
+  overflow: hidden;
+  svg {
+    display: block;
+  }
+}
+.section-et {
+  position: relative;
+  padding: 200px 0;
+  background: #ddd;
+  z-index: 10;
+  &:before,
+  &:after {
+    position: absolute;
+    z-index: 15;
+    content: '';
+    pointer-events: none;
+  }
+}
+.section-et-triangle-top:before {
+  top: -15px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  background: inherit;
+}
+.section-et-triangle-bottom:before {
+  bottom: -15px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  background: inherit;
+}
+.section-et-triangles:before,
+.section-et-triangles:after {
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  background: inherit;
+}
+.section-et-triangles:before {
+  top: -15px;
+}
+.section-et-triangles:after {
+  bottom: -15px;
+}
+.section-et-diagonal {
+  z-index: 1;
+  background: #ddd;
+  &:before,
+  &:after {
+    z-index: -1;
+    top: 0;
+    left: -25%;
+    width: 150%;
+    height: 75%;
+    -webkit-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    background: inherit;
+  }
+  &:after {
+    top: auto;
+    bottom: -20%;
+  }
+}
+.section-et-diagonal-inverse {
+  &:before,
+  &:after {
+    top: -20%;
+    -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  &:after {
+    top: auto;
+    bottom: 0;
+  }
+}
+.section-et-doublediagonal {
+  z-index: 1;
+  background: #ddd;
+  &:before,
+  &:after {
+    z-index: -1;
+    top: 0;
+    left: -25%;
+    width: 150%;
+    height: 75%;
+    -webkit-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    background: inherit;
+  }
+  &:before {
+    height: 50%;
+    -webkit-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+    -webkit-transform-origin: 3% 0;
+        -ms-transform-origin: 3% 0;
+            transform-origin: 3% 0;
+    background: @primary-color;
+  }
+}
+.section-et-doublediagonal-inverse {
+  &:before,
+  &:after {
+    -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+            transform: rotate(2deg);
+  top: -20%;
+  }
+  &:before {
+    top: -28%;
+    -webkit-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
+    -webkit-transform-origin: -3% 0;
+        -ms-transform-origin: -3% 0;
+            transform-origin: -3% 0;
+    background: @primary-color;
+  }
+}
+.section-et-roundedsplit {
+  &:before,
+  &:after {
+    z-index: 10;
+    top: -60px;
+    left: 0;
+    z-index: 15;
+    width: 50%;
+    height: 60px;
+    background: inherit;
+  }
+  &:before {
+    border-radius: 0 70px 0 0;
+  }
+  &:after {
+    left: 50%;
+    border-radius: 70px 0 0 0;
+  }
+}
+.divider-cross {
+  position: relative;
+  padding: 200px 0;
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 1px;
+    background: #ccc;
+  }
+  &:before {
+    -webkit-transform: translateX(-50%) rotate(45deg);
+        -ms-transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg);
+  }
+  &:after {
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+        -ms-transform: translateX(-50%) rotate(-45deg);
+            transform: translateX(-50%) rotate(-45deg);
+  }
+}

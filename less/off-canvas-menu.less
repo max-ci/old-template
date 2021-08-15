@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Off Canvas Menu
+   ========================================================================== */
+
+
+
+/* Basic styles
+   ========================================================================== */
+
+.morph-main-wrapper {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  right: 0;
+  width: 270px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #767676;
+  background: #ccc;
+  overflow: hidden !important;
+  -webkit-transform: translateX(310px);
+  -moz-transform: translateX(310px);
+  -ms-transform: translateX(310px);
+  transform: translateX(310px);
+  -webkit-transition: all .4s cubic-bezier(.37,.15,.32,.94);
+  -moz-transition: all .4s cubic-bezier(.37,.15,.32,.94);
+  -ms-transition: all .4s cubic-bezier(.37,.15,.32,.94);
+  transition: all .4s cubic-bezier(.37,.15,.32,.94);
+}
+.morph-main-wrapper-active {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.morph-main-wrapper-inner {
+  position: relative;
+  width: 287px;
+  height: 100%;
+  overflow-y: scroll !important;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.morph-main {
+  height: 100.1%;
+}

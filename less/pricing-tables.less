@@ -1,0 +1,300 @@
+/* ==========================================================================
+   Pricing
+   ========================================================================== */
+
+.pricing-wrapper {
+  z-index: 1;
+}
+.pricing {
+  z-index: 5;
+}
+.pricing.featured {
+  z-index: 10;
+}
+ul.pricing {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.pricing .pricing-head {
+  background: #999;
+}
+.pricing-three .pricing-head {
+  background: #666;
+}
+.pricing.featured .pricing-head {
+  background: @primary-color;
+}
+.pricing .pricing-head h3 {
+  color: #fff;
+  padding: 20px 0;
+  font-weight: 500!important;
+  margin-bottom: 0!important;
+}
+.pricing.featured .pricing-head h3 {
+  color: #fff;
+  padding: 30px 0;
+  font-weight: 500!important;
+  margin-top: -20px;
+}
+.pricing .pricing-price {
+  font-size: 28px;
+  background: #fafafa;
+  padding: 20px;
+  font-weight: 600;
+  color: #999;
+}
+.pricing.featured .pricing-price {
+  color: @primary-color;
+}
+.pricing .pricing-details {
+  border-bottom: 1px solid #eee;
+  padding: 7px 0;
+  background: #fff;
+}
+.pricing .pricing-button {
+  padding: 30px 0;
+  background: #fafafa;
+}
+.pricing.featured .pricing-button {
+  padding: 50px 0;
+}
+
+
+
+
+.pricing-features {
+ .pricing-button {
+  background: #fff;
+  padding: 54px 0;
+ }
+}
+.pricing-features .header {
+  height: 169px;
+  background: @primary-color;
+  color: #fff;
+  line-height: 169px;
+  margin: 0;
+  h3 {
+    margin: 0;
+    color: #666;
+  }
+}
+
+
+
+.pricing-switch-title {
+  display: block;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+// Pricing v2
+
+.pricing-v2 {
+  padding: 30px;
+  background: #f5f5f5;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  &:after {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    content: '';
+    background: @red;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: blink 2s infinite alternate;
+  }
+  &.best:after {
+    background: @yellow;
+    animation: blink 2s infinite alternate 0.75s;
+  }
+  &.best2:after {
+    background: @green;
+    animation: blink 2s infinite alternate 1.5s;
+  }
+  .price {
+    font-size: 24px;
+    font-weight: 100;
+  }
+}
+
+
+
+
+
+/* tashi */
+.pricing--tashi .pricing__item {
+  margin: 0.5em;
+  padding: 2em 2.5em;
+  text-align: left;
+  color: #fff;
+  background: #262c37;
+}
+
+.pricing--tashi .pricing__title {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0 0 0.15em;
+  color: @primary-color;
+}
+
+.pricing--tashi .pricing__price {
+  font-size: 3em;
+  font-weight: 300;
+  padding: 0.85em 0;
+}
+
+.pricing--tashi .pricing__currency {
+  font-size: 0.65em;
+  vertical-align: super;
+  color: #394150;
+}
+
+.pricing--tashi .pricing__period {
+  font-size: 0.35em;
+  padding: 0 0 0 0.5em;
+  color: #535965;
+}
+
+.pricing--tashi .pricing__sentence {
+  padding: 0 0 0.5em;
+  margin: 0;
+  color: #535965;
+}
+
+.pricing--tashi .pricing__feature-list {
+  font-size: 0.95em;
+  margin: 0;
+  padding: 0 0 2.5em;
+  list-style: none;
+  color: #757983;
+}
+
+.pricing--tashi .pricing__feature {
+  position: relative;
+  display: block;
+  padding: 0 0 0 20px;
+  line-height: 1.5;
+}
+
+.pricing--tashi .pricing__feature::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #1F242D;
+  left: 0;
+  top: 50%;
+  margin: -2px 0 0 0;
+}
+
+.pricing--tashi .pricing__action {
+  margin-top: auto;
+  font-size: 16px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  border-radius: 30px;
+  background: @primary-color;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+  float: right;
+  span {
+    -webkit-font-smoothing: auto !important;
+  }
+}
+
+.pricing--tashi .pricing__item:nth-child(2) .pricing__action {
+  background: #E25ABC;
+}
+
+.pricing--tashi .pricing__item:nth-child(3) .pricing__action {
+  background: #7E5AE2;
+}
+
+.pricing--tashi .pricing__action:hover,
+.pricing--tashi .pricing__action:focus {
+  background: #1A1F28 !important;
+}
+
+
+
+
+
+/* Tenzin */
+.pricing--tenzin .pricing__item {
+  padding: 2em 2.5em;
+  text-align: left;
+  color: #262b38;
+  background: #EEF0F3;
+  border-top: 3px solid #EEF0F3;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.pricing--tenzin .pricing__item:hover {
+  border-color: #3e62e0;
+}
+
+.pricing--tenzin .pricing__title {
+  font-size: 1em;
+  margin: 0 0 1em;
+}
+
+.pricing--tenzin .pricing__price {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0.5em 0 0.75em;
+  border-top: 3px solid rgba(139, 144, 157, 0.18);
+}
+
+.pricing--tenzin .pricing__currency {
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+.pricing--tenzin .pricing__sentence {
+  font-weight: bold;
+  padding: 0 0 0.5em;
+  color: #9CA0A9;
+  border-bottom: 3px solid rgba(139, 144, 157, 0.18);
+}
+
+.pricing--tenzin .pricing__feature-list {
+  font-size: 0.85em;
+  font-style: italic;
+  margin: 0;
+  padding: 0.25em 0 2.5em;
+  list-style: none;
+  text-align: right;
+  color: #8b909d;
+}
+
+.pricing--tenzin .pricing__action {
+  font-weight: bold;
+  margin-top: auto;
+  padding: 1em 2em;
+  color: #fff;
+  border-radius: 30px;
+  background: #3e62e0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.pricing--tenzin .pricing__action:hover,
+.pricing--tenzin .pricing__action:focus {
+  background-color: #3b5ac5;
+}

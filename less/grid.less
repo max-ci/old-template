@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Grid system
+   ========================================================================== */
+
+
+
+/* Grid for Full HD & WQHD screens
+   ========================================================================== */
+
+.responsive-hd {
+  @media (min-width: 1700px) {
+    .container {
+      width: 1500px;
+    }
+  }
+  @media (min-width: 2000px) {
+    .container {
+      width: 1900px;
+    }
+  }
+}
+
+/* Responsive columns of same height
+   ========================================================================== */
+
+.row-same-height {
+  display: table;
+  width: 100%;
+  .img-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+.col-xs-height {
+  display: table-cell;
+  float: none !important;
+}
+@media (min-width: 768px) {
+  .col-sm-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}

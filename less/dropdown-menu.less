@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Dropdown menus
+   ========================================================================== */
+
+
+
+/* Bootstrap overrides
+   ========================================================================== */
+
+.dropdown-menu {
+  min-width: 180px; // ch
+  padding: 0; // ch
+  margin: -1px 0 0;
+  font-size: 11px; // ch
+  background-color: #fafafa; // ch
+  border: 1px solid #eee; // ch
+  border-radius: 0; // ch
+  box-shadow: none;
+  .divider {
+    margin: 9px 0;
+    background-color: #eee; // ch
+  }
+  > li > a {
+    padding: 12px 20px; // ch
+    font-weight: normal;
+    color: #666; // ch
+    transition: none;
+  }
+  > li > a:hover,
+  > li > a:focus {
+    color: #666; // ch
+    background-color: #eee;
+  }
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus {
+    color: #fff;
+    background-color: @primary-color;
+  }
+  > .disabled > a,
+  > .disabled > a:hover,
+  > .disabled > a:focus {
+    color: #bbb;
+  }
+  .dropup &,
+  .navbar-fixed-bottom .dropdown & {
+    margin-bottom: 2px;
+  }
+}
+
+
+
+

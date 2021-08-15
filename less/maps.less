@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Google Maps
+   ========================================================================== */
+
+.google-maps-wrapper {
+  position: relative;
+}
+.google-maps {
+  width: 100%;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  .google-maps {
+    height: 500px;
+  }
+}
+.google-maps-sm {
+  height: 300px;
+}
+#from {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  border: none;
+  outline: 0;
+  background: #f5f5f5;
+}
+.dark-layout #from {
+  color: #ddd;
+  background: #555;
+}
+#from-your-location {
+  font-weight: 300;
+  display: block;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  background: @primary-color;
+  &:hover {
+    background: shade(@primary-color, 10%);
+  }
+}
+#calculate-route-error {
+  font-weight: 600;
+  line-height: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  filter: alpha(opacity=50);
+  opacity: .5;
+  color: #fff;
+  background: rgba(255,0,0,.9);
+}
+.google-maps-iw {
+  padding: 5px 0;
+  .google-maps-iw-heading {
+    margin-bottom: 5px;
+    color: @primary-color;
+  }
+  .google-maps-iw-desc {
+    margin: 0;
+    color: #666;
+  }
+}
+.google-maps-contact {
+  display: none;
+}
+@media (min-width: 768px) {
+  .google-maps-contact {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    right: 75px;
+    display: block;
+    width: 250px;
+    padding: 30px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: left;
+    background: #fff;
+    background: rgba(255,255,255,.9);
+    address {
+      color: #666;
+      i {
+        margin-right: 8px;
+      }
+      a {
+        color: #666;
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+    hr {
+      margin-top: 21px;
+      border-top-color: rgba(255,255,255,.5);
+    }
+  }
+  .opening-hours {
+    margin: 0;
+    list-style: none;
+    color: #666;
+    > li {
+      position: relative;
+      margin-bottom: 2px;
+      > i {
+        margin-right: 8px;
+      }
+      > span {
+        position: absolute;
+        right: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .google-maps-contact-dark {
+    background: #333;
+    background: rgba(0,0,0,.8);
+    address {
+      color: #fff;
+      a {
+        color: #fff;
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+    .opening-hours {
+      color: #fff;
+    }
+  }
+}

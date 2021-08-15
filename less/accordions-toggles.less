@@ -1,0 +1,324 @@
+/* ==========================================================================
+   Accordions and toggles
+   ========================================================================== */
+
+
+
+/* Basic styles
+   ========================================================================== */
+
+.accordion-toggle-icon-wrapper {
+  line-height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: background .2s ease-in-out;
+          transition: background .2s ease-in-out;
+  text-align: center;
+  background: #999;
+  > .accordion-toggle-icon {
+    line-height: inherit;
+    position: static;
+    color: #fff;
+  }
+}
+.dark-layout .accordion-toggle-icon-wrapper {
+  background: #333;
+}
+.accordion-toggle-icon {
+  font-size: 16px;
+  line-height: 51px;
+  position: absolute;
+  top: 0;
+  right: 12px;
+  -webkit-transition: color .2s ease-in-out, -webkit-transform .2s ease-in-out;
+          transition: color .2s ease-in-out, transform .2s ease-in-out;
+  color: #666;
+}
+.dark-layout .accordion-toggle-icon {
+  color: #ddd;
+}
+[aria-expanded='true'] .accordion-toggle-icon-wrapper {
+  background: @primary-color;
+  > .accordion-toggle-icon {
+    color: #fff;
+  }
+}
+[aria-expanded='true'] .accordion-toggle-icon {
+  color: @primary-color;
+}
+.accordion-toggle-icon-rotate {
+  -webkit-transform: rotate(180deg) translateZ(0);
+      -ms-transform: rotate(180deg) translateZ(0);
+          transform: rotate(180deg) translateZ(0);
+}
+
+/* Default accordion
+   ========================================================================== */
+
+.accordion-default {
+  .panel {
+    border-width: 2px;
+  }
+  .panel-heading {
+    position: relative;
+    padding: 0;
+    border-radius: 0;
+    > a {
+      background: #fafafa;
+      display: block;
+      padding: 18px 15px;
+    }
+  }
+  .panel-heading-with-icon > a {
+    padding-left: 75px;
+  }
+  .panel-title,
+  .panel-heading-icon {
+    -webkit-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
+    color: #666;
+  }
+  [aria-expanded='true'] .panel-title,
+  [aria-expanded='true'] .panel-heading-icon {
+    color: @primary-color;
+  }
+  .panel-body {
+    border-width: 2px !important;
+  }
+  .panel + .panel {
+    margin-top: 8px;
+  }
+  &.accordion-no-gap .panel + .panel {
+    margin-top: -2px;
+  }
+}
+.dark-layout .accordion-default {
+  .panel {
+    border-width: 2px;
+  }
+  .panel-heading > a {
+    background: #444;
+  }
+  .panel-title,
+  .panel-heading-icon {
+    color: #ddd;
+  }
+  [aria-expanded='true'] > .panel-title,
+  [aria-expanded='true'] > .panel-heading-icon {
+    color: @primary-color;
+  }
+}
+
+/* Custom accordion (version 1)
+   ========================================================================== */
+
+.accordion-v1 {
+  position: relative;
+  .accordion-v1-title {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .panel {
+    position: relative;
+    margin-bottom: 10px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    &:before {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 1px;
+      height: 100%;
+      content: '';
+      background: #eee;
+    }
+    &:last-child:before {
+      width: 0;
+      height: 0;
+    }
+  }
+  .panel-body {
+    padding: 0;
+  }
+  .panel-collapse {
+    padding-left: 53px;
+  }
+}
+.accordion-v1-icon {
+  line-height: 36px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+  text-align: center;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  background: #fafafa;
+  > i {
+    color: #ccc;
+  }
+  &[aria-expanded='true'] {
+    background: @primary-color;
+    > i {
+      color: #fff;
+    }
+  }
+}
+.dark-layout {
+  .accordion-v1 {
+    .panel {
+      background: none;
+      &:before {
+        background: #555;
+      }
+    }
+  }
+  .accordion-v1-title {
+    color: #ddd;
+  }
+  .accordion-v1-icon {
+    border: 2px solid #555;
+    background: #444;
+    &[aria-expanded='true'] {
+      background: @primary-color;
+    }
+  }
+}
+
+/* Custom accordion (version 2)
+   ========================================================================== */
+
+.accordion-v2 {
+  .accordion-toggle-icon {
+    right: 0;
+    margin-right: 0;
+  }
+  .accordion-v2-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0;
+    -webkit-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
+    > i {
+      margin-right: 8px;
+    }
+  }
+  [aria-expanded='true'] .accordion-v2-title {
+    color: @primary-color;
+  }
+  .panel-heading {
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom: 2px solid #eee;
+  }
+  .panel {
+    border: none;
+    background: none;
+    box-shadow: none;
+    &:last-child {
+      .panel-heading {
+        border: none;
+      }
+      .panel-body {
+        padding-bottom: 0;
+        border-top: 2px solid #eee !important;
+      }
+    }
+  }
+  .panel-body {
+    padding: 30px 0;
+    border: none !important;
+  }
+  .panel + .panel {
+    margin-top: 0;
+  }
+}
+.dark-layout {
+  .accordion-v2 {
+    .panel {
+      background: none;
+      &:last-child .panel-body {
+        border-top: 2px solid #555 !important;
+      }
+    }
+    .panel-heading {
+      border-bottom: 2px solid #555;
+    }
+    .accordion-v2-title {
+      color: #ddd;
+    }
+    [aria-expanded='true'] .accordion-v2-title {
+      color: @primary-color;
+    }
+  }
+}
+
+
+
+
+
+/* Accordions and toggles
+   ========================================================================== */
+
+.accordion-toggle-icon-wrapper {
+  box-shadow: 0 2px 5px rgba(0,0,0,.15);
+  background: #fff;
+  > .accordion-toggle-icon {
+    color: #666;
+  }
+}
+
+/* Default accordion
+   ========================================================================== */
+
+.accordion-default {
+  .panel {
+    border: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,.15);
+  }
+  .panel + .panel {
+    margin-top: @accordion-gap-md;
+  }
+}
+&.dark-layout .accordion-default {
+  .panel {
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, .36), 0 1.5px 6px rgba(0, 0, 0, .24);
+  }
+}
+
+/* Custom accordion (version 1)
+ ========================================================================== */
+
+.accordion-v1-icon {
+  border: none;
+  line-height: 40px;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, .24), 0 1.5px 6px rgba(0, 0, 0, .12);
+}
+&.dark-layout .accordion-v1-icon {
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, .36), 0 1.5px 6px rgba(0, 0, 0, .24);
+}
+
+/* Custom accordion (version 2)
+ ========================================================================== */
+
+.accordion-v2 .panel-heading {
+  border: none;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.12);
+}
+.accordion-v2 .panel:last-child .panel-heading {
+  box-shadow: none;
+}
+.accordion-v2 .panel:last-child .panel-body {
+  border-top: none !important;
+  box-shadow: 0 -4px 2px -2px rgba(0,0,0,.36);
+}
+&.dark-layout .accordion-v2 .panel-heading {
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.36);
+}

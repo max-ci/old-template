@@ -1,0 +1,96 @@
+/* ==========================================================================
+   List groups
+   ========================================================================== */
+
+.list-group-item {
+  padding: 18px 15px;
+  background-color: @list-group-bg;
+  border: 2px solid @list-group-border;
+  margin-top: -2px;
+  &:first-child {
+    border-top-left-radius: @list-group-border-radius;
+    border-top-right-radius: @list-group-border-radius;
+  }
+  &:last-child {
+    border-bottom-left-radius: @list-group-border-radius;
+    border-bottom-right-radius: @list-group-border-radius;
+  }
+}
+a.list-group-item,
+button.list-group-item {
+  color: @list-group-link-color;
+  .list-group-item-heading {
+    color: @list-group-link-heading-color;
+  }
+  &:hover,
+  &:focus {
+    color: @list-group-link-hover-color;
+    background-color: @list-group-hover-bg;
+  }
+}
+.list-group-item {
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background-color: @list-group-disabled-bg;
+    color: @list-group-disabled-color;
+    cursor: @cursor-disabled;
+    .list-group-item-text {
+      color: @list-group-disabled-text-color;
+    }
+  }
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    color: @list-group-active-color;
+    background-color: @primary-color;
+    border-color: @primary-color;
+    .list-group-item-text {
+      color: @list-group-active-text-color;
+    }
+  }
+  &.active .list-group-item-text,
+  &.active:hover .list-group-item-text,
+  &.active:focus .list-group-item-text {
+    color: tint(@primary-color, 70%);
+  }
+  > i {
+    margin-right: 8px;
+  }
+}
+.dark-layout {
+  .list-group-item {
+    background-color: #444;
+    border: 2px solid #555;
+    color: #ddd;
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+      background-color: #3a3a3a;
+      color: @list-group-disabled-color;
+      .list-group-item-text {
+        color: @list-group-disabled-text-color;
+      }
+    }
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      color: #fff;
+      background: @primary-color;
+      border-color: @primary-color;
+    }
+  }
+  a.list-group-item,
+  button.list-group-item {
+    color: #ddd;
+    .list-group-item-heading {
+      color: #fff;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #ddd;
+      background-color: #3a3a3a;
+    }
+  }
+}

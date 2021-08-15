@@ -1,0 +1,409 @@
+/* ==========================================================================
+   Portfolio
+   ========================================================================== */
+
+
+
+/* Portfolio caption effects
+   ========================================================================== */
+
+
+.caption h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+.caption h2 span {
+  font-weight: 800;
+}
+.caption h2,
+.caption p {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+.effect-layla {
+  background: #18a367;
+  position: relative;
+}
+.effect-layla .caption {
+  padding: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.effect-layla .caption:before,
+.effect-layla .caption:after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+}
+.effect-layla .caption:before {
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
+  left: 30px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.effect-layla .caption:after {
+  top: 30px;
+  right: 50px;
+  bottom: 30px;
+  left: 50px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+.effect-layla h2 {
+  padding-top: 12%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+.effect-layla p {
+  padding: 0.5em 2em;
+  text-transform: none;
+  opacity: 0;
+  -webkit-transform: translate3d(0,-10px,0);
+  transform: translate3d(0,-10px,0);
+}
+.effect-layla img,
+.effect-layla .caption:before,
+.effect-layla .caption:after,
+.effect-layla p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.effect-layla:hover img {
+  opacity: 0.7;
+}
+
+.effect-layla:hover .caption:before,
+.effect-layla:hover .caption:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.effect-layla:hover h2,
+.effect-layla:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.effect-layla:hover .caption:after,
+.effect-layla:hover h2,
+.effect-layla:hover p,
+.effect-layla:hover img {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+
+
+
+
+
+
+
+.effect-zoe h2 {
+  color: #666;
+  font-weight: 100;
+}
+.effect-zoe {
+  position: relative;
+  overflow: hidden;
+}
+.effect-zoe .caption {
+  top: auto;
+  bottom: 0;
+  padding: 1em;
+  height: 60px;
+  background: #fff;
+  color: #3c4a50;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+  position: absolute;
+  width: 100%;
+}
+
+.effect-zoe h2 {
+  float: left;
+}
+
+.effect-zoe p.icon-links a {
+  float: right;
+  color: #3c4a50;
+}
+
+.effect-zoe:hover p.icon-links a:hover,
+.effect-zoe:hover p.icon-links a:focus {
+  color: #252d31;
+}
+
+.effect-zoe p.description {
+  position: absolute;
+  bottom: 8em;
+  padding: 2em;
+  color: #fff;
+  text-transform: none;
+  font-size: 90%;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+  -webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+}
+
+.effect-zoe h2,
+.effect-zoe p.icon-links a {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,200%,0);
+  transform: translate3d(0,200%,0);
+}
+
+.effect-zoe p.icon-links a span:before {
+  display: inline-block;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.icon-eye:before {
+  content: '\e000';
+}
+
+.icon-paper-clip:before {
+  content: '\e001';
+}
+
+.icon-heart:before {
+  content: '\e024';
+}
+
+.effect-zoe h2 {
+  display: inline-block;
+}
+
+.effect-zoe:hover p.description {
+  opacity: 1;
+}
+
+.effect-zoe:hover .caption,
+.effect-zoe:hover h2,
+.effect-zoe:hover p.icon-links a {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.effect-zoe:hover h2 {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.effect-zoe:hover p.icon-links a:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.effect-zoe:hover p.icon-links a:nth-child(2) {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.effect-zoe:hover p.icon-links a:first-child {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+
+
+
+
+
+.cs-style-3 {
+  overflow: hidden;
+  position: relative;
+}
+
+.cs-style-3 img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.no-touch .cs-style-3:hover img,
+.cs-style-3 .cs-hover img {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+.cs-style-3 .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #2c3f52;
+  color: #ed4e6e;
+  height: 100px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-3:hover .caption,
+.cs-style-3.cs-hover .caption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 .caption a {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+
+
+
+
+
+.cbp-item {
+  overflow: visible !important;
+}
+.cs-style-4-wrapper {
+  -webkit-perspective: 1700px;
+  -moz-perspective: 1700px;
+  perspective: 1700px;
+  -webkit-perspective-origin: 0 50%;
+  -moz-perspective-origin: 0 50%;
+  perspective-origin: 0 50%;
+}
+
+.cs-style-4 {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.cs-style-4 > div {
+  overflow: hidden;
+}
+
+.cs-style-4 img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.no-touch .cs-style-4:hover img,
+.cs-style-4.cs-hover img {
+  -webkit-transform: translateX(25%);
+  -moz-transform: translateX(25%);
+  -ms-transform: translateX(25%);
+  transform: translateX(25%);
+}
+
+.cs-style-4 .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+  -moz-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+  background: @primary-color;
+}
+
+.no-touch .cs-style-4:hover .caption,
+.cs-style-4.cs-hover .caption {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-4 .caption a {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+
+
+
+
+
+
+// Portfolio - Single Item
+
+.portfolio-item {
+
+}
+.portfolio-item-image {
+  margin: 0 auto 100px;
+}
+.portfolio-item-desc {
+
+}
+
+
+
+.cbp-load-more-btn {
+  display: block;
+  padding: 35px 0;
+  text-transform: uppercase;
+  color: #fff;
+  background: @primary-color;
+  letter-spacing: 10px;
+  font-size: 11px;
+  text-align: center;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+  }
+}

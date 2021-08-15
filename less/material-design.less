@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Material Design
+   ========================================================================== */
+
+
+
+/* Basic styles
+   ========================================================================== */
+
+body.material-design {
+  font-family: @font-family-material-design;
+}
+
+.material-design {
+
+  /* Accordions and toggles
+     ========================================================================== */
+
+  .accordion-toggle-icon-wrapper {
+    box-shadow: 0 2px 5px rgba(0,0,0,.15);
+    background: #fff;
+    > .accordion-toggle-icon {
+      color: #666;
+    }
+  }
+
+  /* Default accordion
+     ========================================================================== */
+
+  .accordion-default {
+    .panel {
+      border: none;
+      box-shadow: 0 1px 5px rgba(0,0,0,.15);
+    }
+    .panel + .panel {
+      margin-top: @accordion-gap-md;
+    }
+  }
+  &.dark-layout .accordion-default {
+    .panel {
+      box-shadow: 0 1.5px 4px rgba(0, 0, 0, .36), 0 1.5px 6px rgba(0, 0, 0, .24);
+    }
+  }
+
+  /* Custom accordion (version 1)
+   ========================================================================== */
+
+  .accordion-v1-icon {
+    border: none;
+    line-height: 40px;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, .24), 0 1.5px 6px rgba(0, 0, 0, .12);
+  }
+  &.dark-layout .accordion-v1-icon {
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, .36), 0 1.5px 6px rgba(0, 0, 0, .24);
+  }
+
+  /* Custom accordion (version 2)
+   ========================================================================== */
+
+  .accordion-v2 .panel-heading {
+    border: none;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.12);
+  }
+  .accordion-v2 .panel:last-child .panel-heading {
+    box-shadow: none;
+  }
+  .accordion-v2 .panel:last-child .panel-body {
+    border-top: none !important;
+    box-shadow: 0 -4px 2px -2px rgba(0,0,0,.36);
+  }
+  &.dark-layout .accordion-v2 .panel-heading {
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.36);
+  }
+
+}

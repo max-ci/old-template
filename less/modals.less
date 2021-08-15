@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Modals
+   ========================================================================== */
+
+.modal {
+  perspective: 1000px;
+}
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .2s ease;
+          transition:         transform .2s ease;
+  -webkit-transform: translate(0, -25%) scale(0.75) rotateX(20deg);
+      -ms-transform: translate(0, -25%) scale(0.75) rotateX(20deg);
+          transform: translate(0, -25%) scale(0.75) rotateX(20deg);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0) scale(1) rotateX(0);
+      -ms-transform: translate(0, 0) scale(1) rotateX(0);
+          transform: translate(0, 0) scale(1) rotateX(0);
+}
+.modal-content {
+  border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+  border: 1px solid @modal-content-border-color;
+  border-radius: 0; // ?
+  background-color: @modal-content-bg;
+  box-shadow: none; // ?
+}
+.modal-backdrop {
+  background-color: @modal-backdrop-bg;
+  &.in {
+    opacity: .75;
+
+    filter: alpha(opacity=75);
+  }
+}
+.modal-header {
+  padding: @modal-title-padding;
+  border-bottom: 1px solid @modal-header-border-color;
+  .close {
+    top: 3px;
+    margin: 0;
+  }
+}
+.modal-title {
+  font-weight: 600;
+}
+.modal-body {
+  padding: @modal-inner-padding;
+}
+.modal-footer {
+  padding: @modal-inner-padding;
+  border-top: 1px solid @modal-footer-border-color;
+  .btn-et + .btn-et {
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+  .btn-group .btn-et + .btn-et {
+    margin-left: -1px;
+  }
+  .btn-group .buttons-without-border .btn-et + .btn-et {
+    margin-left: 0;
+  }
+}
+@media (min-width: @screen-sm-min) {
+  .modal-dialog {
+    width: @modal-md;
+  }
+  .modal-content {
+    box-shadow: none; // ch
+  }
+  .modal-sm {
+    width: @modal-sm;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: @modal-lg;
+  }
+}
+.dark-layout {
+  .modal-content {
+    border: 1px solid @modal-content-border-color-dark;
+    background-color: @modal-content-bg-dark;
+  }
+  .modal-header {
+    border-bottom: 1px solid @modal-header-border-color-dark;
+  }
+  .modal-footer {
+    border-top: 1px solid @modal-footer-border-color-dark;
+  }
+  .modal-backdrop {
+    background-color: #fff;
+    &.in {
+      opacity: .3;
+      filter: alpha(opacity=30);
+    }
+  }
+}
+
+
+
+.modal-dialog-left {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+}

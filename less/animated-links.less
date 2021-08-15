@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Animated links
+   ========================================================================== */
+
+
+
+/* Basic styles (animated links)
+   ========================================================================== */
+
+.animated-link a {
+  position: relative !important;
+  display: inline-block;
+}
+
+/* Animated link (version 1) - Same word slide in and border bottom
+   ========================================================================== */
+
+.link-slide-in {
+  a {
+    overflow: hidden;
+    height: 1em;
+    padding: 0 4px;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:hover > span,
+    &:focus > span {
+      -webkit-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+              transform: translateY(-100%);
+    }
+    > span {
+      position: relative;
+      display: inline-block;
+      -webkit-transition: -webkit-transform .3s;
+          -ms-transition:    -moz-transform .3s;
+              transition:         transform .3s;
+      &:before {
+        font-weight: 700;
+        position: absolute;
+        top: 100%;
+        content: attr(data-hover);
+        -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+      }
+    }
+  }
+}
+
+/* Animated link - Text fill
+   ========================================================================== */
+
+.link-text-fill {
+  a {
+    &:hover {
+      color: inherit;
+    }
+    &:hover:before,
+    &:focus:before {
+      max-width: 100%;
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: hidden;
+      max-width: 0;
+      padding: 0;
+      content: attr(data-hover);
+      -webkit-transition: max-width .5s;
+              transition: max-width .5s;
+      color: @primary-color;
+    }
+  }
+}
+
+/* Basic styles (animated links - inline)
+   ========================================================================== */
+
+.animated-link-inline {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  a {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    white-space: nowrap;
+    text-decoration: none;
+    outline: none;
+    &:before,
+    &:after {
+      pointer-events: none;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+  }
+}
+
+/* Animated link (inline) - Fade in background
+   ========================================================================== */
+
+.link-fade-in-bg {
+  a {
+    color: #666;
+    display: inline;
+    padding-bottom: 2px;
+    font-weight: 500;
+    -webkit-transition: background-color .3s, border-color .3s;
+            transition: background-color .3s, border-color .3s;
+    border-bottom: 1px solid #ddd;
+    &:hover,
+    &:focus {
+      border-color: rgba(52,73,94,0);
+      background-color: #eee;
+    }
+  }
+}

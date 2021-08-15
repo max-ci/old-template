@@ -1,0 +1,251 @@
+/* ==========================================================================
+   Image with hotspots
+   ========================================================================== */
+
+.image-with-hotspots {
+  position: relative;
+}
+.hotspot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  color: #666;
+  line-height: 30px;
+  cursor: pointer;
+  &:hover {
+    color: #666;
+  }
+  &.hotspot-dark {
+    background: #444;
+    color: #ddd;
+  }
+  &.hotspot-primary {
+    background: @primary-color;
+    color: #fff;
+  }
+}
+.hotspot-1 {
+  left: 10%;
+  top: 10%;
+}
+.hotspot-2 {
+  left: 20%;
+  top: 20%;
+}
+.hotspot-3 {
+  left: 40%;
+  top: 50%;
+}
+.hotspot-mobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  .hotspot-mobile {
+    display: block;
+    margin-top: 20px;
+  }
+  .hotspot-mobile-number {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: @primary-color;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+
+
+
+.cd-single-step {
+  /* tour single step */
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #999;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.4s 0s, opacity 0s 0.4s;
+  -moz-transition: -moz-transform 0.4s 0s, opacity 0s 0.4s;
+  transition: transform 0.4s 0s, opacity 0s 0.4s;
+}
+.cd-single-step > span {
+  /* dot indicator - visible on desktop version only */
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: inherit;
+  background: @primary-color;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+  /* replace text with background images */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  /* hide on mobile */
+  display: none;
+}
+.cd-single-step::after {
+  /* this is used to create the pulse animation */
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* hide on mobile */
+  display: none;
+}
+.active .cd-single-step {
+  /* tour started */
+  -webkit-transform: scale(1) translateX(100%);
+  -moz-transform: scale(1) translateX(100%);
+  -ms-transform: scale(1) translateX(100%);
+  -o-transform: scale(1) translateX(100%);
+  transform: scale(1) translateX(100%);
+  -webkit-transition: -webkit-transform 0.4s 0s, opacity 0.4s 0s;
+  -moz-transition: -moz-transform 0.4s 0s, opacity 0.4s 0s;
+  transition: transform 0.4s 0s, opacity 0.4s 0s;
+}
+.cd-single-step {
+  /* visible step */
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.4s 0s;
+  -moz-transition: -moz-transform 0.4s 0s;
+  transition: transform 0.4s 0s;
+}
+@media only screen and (min-width: 1100px) {
+  .cd-single-step {
+    /* reset style */
+    height: auto;
+    width: auto;
+    top: auto;
+    left: auto;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-transition: visibility 0s 0.4s;
+    -moz-transition: visibility 0s 0.4s;
+    transition: visibility 0s 0.4s;
+  }
+  .cd-single-step:nth-of-type(1) {
+    /* set tour points positions */
+    bottom: 40%;
+    right: 30%;
+  }
+  .cd-single-step:nth-of-type(2) {
+    bottom: 60%;
+    right: 48%;
+  }
+  .cd-single-step:nth-of-type(3) {
+    top: 28%;
+    left: 20%;
+  }
+  .cd-single-step > span, .cd-single-step::after {
+    display: block;
+  }
+  .cd-single-step, .cd-single-step.move-left {
+    -webkit-transition: visibility 0s 0.4s;
+    -moz-transition: visibility 0s 0.4s;
+    transition: visibility 0s 0.4s;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .cd-single-step {
+    visibility: visible;
+    -webkit-transition: visibility 0s 0s;
+    -moz-transition: visibility 0s 0s;
+    transition: visibility 0s 0s;
+  }
+  .cd-single-step > span {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  .cd-single-step:after {
+    -webkit-animation: cd-pulse 2s infinite;
+    -moz-animation: cd-pulse 2s infinite;
+    animation: cd-pulse 2s infinite;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+
+}
+
+@-webkit-keyframes cd-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #ff962c;
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 150, 44, 0);
+  }
+}
+@-moz-keyframes cd-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #ff962c;
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 150, 44, 0);
+  }
+}
+@keyframes cd-pulse {
+  0% {
+    box-shadow: 0 0 0 0 @primary-color;
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(230, 190, 138, 0);
+  }
+}

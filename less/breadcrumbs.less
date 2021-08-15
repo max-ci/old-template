@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Breadcrumbs
+   ========================================================================== */
+
+.breadcrumbs {
+  padding: @breadcrumbs-padding 0;
+  background: @breadcrumbs-bg;
+}
+.dark-layout {
+  .breadcrumbs {
+    background: @breadcrumbs-bg-dark-layout;
+  }
+}
+.breadcrumbs-sm {
+  padding: @breadcrumbs-sm-padding 0;
+  .page-title {
+    font-size: 20px;
+  }
+  .breadcrumb {
+    margin-top: 3px;
+  }
+}
+.breadcrumbs-lg {
+  padding: @breadcrumbs-lg-padding 0;
+}
+.breadcrumb {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding: 0;
+  text-transform: uppercase;
+  border-radius: 0;
+  background: none; // bg-color: @breadcrumb-bg
+  > li + li:before {
+    padding: 0 5px;
+    content: '/\00a0';
+    color: #ccc; // @breadcrumb-color
+  }
+  > .active {
+    color: @primary-color;
+  }
+  > span {
+    margin-right: 5px;
+  }
+}
+.dark-layout .breadcrumb {
+  > li + li:before {
+    color: #777;
+  }
+}
+.page-title {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+}
+.breadcrumbs-v1 {
+  .breadcrumb {
+    padding: 10px 15px;
+    background: #fff;
+  }
+  .page-title {
+    padding: 10px 15px;
+    background: #fff;
+  }
+}
+.dark-layout .breadcrumbs-v1 {
+  .breadcrumb {
+    background: #555;
+  }
+  .page-title {
+    background: #555;
+  }
+}
+.breadcrumbs-v2 {
+  .breadcrumb {
+    display: inline-block;
+    margin: 0;
+    padding: 5px 15px;
+    background: #fff;
+  }
+  .page-title {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 1px;
+    padding: 10px 15px;
+    background: #fff;
+  }
+}
+.dark-layout .breadcrumbs-v2 {
+  .page-title {
+    background: #555;
+  }
+  .breadcrumb {
+    background: #555;
+  }
+}
+@media (max-width: 767px) {
+  .page-title,
+  .breadcrumb {
+    float: none !important;
+    text-align: center;
+  }
+  .breadcrumbs-v2 .page-title,
+  .breadcrumbs-v2 .breadcrumb {
+    display: block;
+  }
+  .breadcrumb-v2 > span {
+    display: none;
+  }
+}

@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Theme Name: all business - Multi-Purpose responsive theme
+   Theme URI: http://themes.com/allbusiness
+   Author: Maksymilian Czarnecki
+   Author URI: http://wrapbootstrap.com
+   Version: 1.0.0
+   ========================================================================== */
+/* ==========================================================================
+
+/* ==========================================================================
+   Preview page
+   ========================================================================== */
+
+.preview-image {
+  padding: 30px;
+}
+.slide-out-footer {
+  background: #fafafa; color: #fff; text-align: center; padding: 20px 0;
+}
+.slide-out-footer p {
+  font-size: 12px; color: #999;
+}
+.promo-main {
+  padding: 40px 0; display: block; position: relative; text-align: center
+}
+.more-coming-soon {
+  padding: 140px 0; position: relative;
+}
+.more-coming-soon h2 {
+  color: #ddd; font-weight: 100; text-align: center; margin-bottom: 5px;
+}
+.sexy-woman {
+  width: 300px; position: absolute;bottom:0; right: 50px;
+}
+.features-icon {
+  margin-right: 10px;
+}
+.shortcode-links a {
+  margin-top: -2px !important;
+  transition: none;
+  font-weight: 500;
+}
+.features h4 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.omom,
+.animsition-link.btn-et.btn-et-default {
+  transition: none;
+  background: #fff !important;
+}
+.omom:hover,
+.animsition-link.btn-et.btn-et-default:hover {
+  color: #666;
+  background: #f5f5f5 !important;
+}
+.video-presentation:hover,
+.video-presentation:focus {
+  color: #fff;
+}
+.livicono {
+  line-height: 54px;
+  margin-left: 3px;
+}

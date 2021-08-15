@@ -1,0 +1,400 @@
+/* ==========================================================================
+   iLightBox
+   ========================================================================== */
+
+/*  ==== Overlay ====  */
+.ilightbox-overlay.custom {
+  background: #000;
+}
+
+/*  ==== Loader ====  */
+.ilightbox-loader.custom {
+  background: #fff;
+  opacity: 1;
+}
+.ilightbox-loader.custom div {
+  display: none;
+}
+.ilightbox-loader.custom div:before {
+  content: '\f1ce';
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #666;
+  font-size: 40px;
+  position: absolute;
+  right: 17px;
+  top: 30px;
+  -webkit-animation: fa-spin 2s infinite linear;
+}
+/* == Horizontal mode == */
+.ilightbox-loader.custom.horizontal {
+
+}
+/*  ==== Windows ====  */
+.ilightbox-holder.custom {
+  box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+.ilightbox-holder.custom div.ilightbox-container {
+
+}
+.ilightbox-holder.custom .ilightbox-wrapper {
+
+}
+
+/* == Next window in groups == */
+.ilightbox-holder.custom.ilightbox-next {
+
+}
+
+/* == Previous window in groups == */
+.ilightbox-holder.custom.ilightbox-prev {
+
+}
+
+/* == Image == */
+.ilightbox-holder.custom img.ilightbox-image {
+
+}
+
+/* == Caption container == */
+.ilightbox-holder.custom .ilightbox-container .ilightbox-caption {
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* == Error container == */
+.ilightbox-holder.custom .ilightbox-alert {
+
+}
+
+
+/*  ==== Thumbnails ====  */
+.ilightbox-thumbnails.custom {
+
+}
+.ilightbox-thumbnails.custom .ilightbox-thumbnails-container {
+
+}
+.ilightbox-thumbnails.custom .ilightbox-thumbnails-grid {
+
+}
+
+/* == Thumbnail == */
+.ilightbox-thumbnails.custom .ilightbox-thumbnails-grid .ilightbox-thumbnail {
+
+}
+.ilightbox-thumbnails.custom .ilightbox-thumbnails-grid .ilightbox-thumbnail img {
+
+}
+
+/* == Horizontal mode == */
+.ilightbox-thumbnails.custom.ilightbox-horizontal {
+
+}
+.ilightbox-thumbnails.custom.ilightbox-horizontal .ilightbox-thumbnails-container {
+
+}
+
+/* == Vertical mode == */
+.ilightbox-thumbnails.custom.ilightbox-vertical {
+
+}
+.ilightbox-thumbnails.custom.ilightbox-vertical .ilightbox-thumbnails-container {
+
+}
+
+/* == Icon == */
+.ilightbox-thumbnails.custom .ilightbox-thumbnails-grid .ilightbox-thumbnail .ilightbox-thumbnail-icon {
+
+}
+
+/* == Video Icon == */
+.ilightbox-thumbnails.custom .ilightbox-thumbnails-grid .ilightbox-thumbnail .ilightbox-thumbnail-video {
+
+}
+
+
+/*  ==== Toolbar ====  */
+.ilightbox-toolbar.custom {
+  top: 0;
+  right: 0;
+  background: #fff;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ilightbox-toolbar.custom a {
+  width: 40px;
+  height: 40px;
+  float: right;
+  color: #333;
+  line-height: 40px;
+  text-align: center;
+  font-size: 13px;
+  transition: none;
+  border-left: 1px solid #ddd;
+}
+.ilightbox-toolbar.custom a:hover {
+  background: #f5f5f5;
+}
+
+/* == Inner Toolbar == */
+.ilightbox-holder.custom .ilightbox-inner-toolbar {
+
+}
+.ilightbox-holder .ilightbox-inner-toolbar .ilightbox-toolbar.custom {
+
+}
+.ilightbox-holder .ilightbox-inner-toolbar .ilightbox-toolbar.custom a {
+
+}
+
+/* == Close Button == */
+.ilightbox-toolbar.custom a.ilightbox-close {
+}
+.ilightbox-toolbar.custom a.ilightbox-close:before {
+  content: '\e646';
+  font-family: themify;
+}
+
+/* == Fullscreen Button == */
+.ilightbox-toolbar.custom a.ilightbox-fullscreen {}
+.ilightbox-toolbar.custom a.ilightbox-fullscreen:before {
+  content: '\f065';
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ilightbox-fullscreen .ilightbox-fullscreen:before {
+  content: '\f066' !important;
+}
+/* == Play Button == */
+.ilightbox-toolbar.custom a.ilightbox-play {}
+.ilightbox-toolbar.custom a.ilightbox-play:before {
+  content: '\f04b';
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ilightbox-toolbar.custom a.ilightbox-pause:before {
+  content: '\f04c';
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* == Window Title == */
+.ilightbox-holder.custom .ilightbox-inner-toolbar .ilightbox-title {
+
+}
+
+@media (max-width: 992px) {
+  .ilightbox-toolbar.custom {
+    background: none;
+    a {
+      border: none;
+      color: #fff;
+    }
+  }
+}
+
+// custom social icons
+
+.ilightbox-holder .ilightbox-container .ilightbox-social {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 0;
+  height: auto;
+  padding-left: 40px;
+  background: #fff;
+  font-size: 0;
+  &:before {
+    font-size: 13px;
+    content: '\f064';
+    position: absolute;
+    background: @primary-color;
+    color: #fff;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 0;
+    text-align: center;
+    font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+.ilightbox-holder .ilightbox-container .ilightbox-social ul {
+  height: auto;
+}
+.ilightbox-holder .ilightbox-container .ilightbox-social ul li {
+  display: inline-block;
+}
+.ilightbox-holder .ilightbox-container .ilightbox-social ul li a {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  background: #fff !important;
+  background: rgba(255,255,255,.75) !important;
+  line-height: 40px;
+  text-align: center;
+  color: #666;
+  border: none;
+  border-right: 1px solid #ddd;
+  transition: none;
+  font-size: 14px;
+  &:hover {
+    background: #f5f5f5 !important;
+  }
+}
+.ilightbox-holder .ilightbox-container .ilightbox-social ul li:last-child a {
+  border-right: none;
+}
+.ilightbox-social ul li a:before {
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.facebook a:before {
+  content: '\f09a';
+}
+.digg a:before {
+  content: '\f1a6';
+}
+.twitter a:before {
+  content: '\f099';
+}
+.delicious a:before {
+  content: '\f1a5';
+}
+.reddit a:before {
+  content: '\f1a1';
+}
+.googleplus a:before {
+  content: '\f0d5';
+}
+.pinterest a:before {
+  content: '\f0d2';
+}
+.instagram a:before {
+  content: '\f16d';
+}
+
+
+
+//custom arrows
+
+.ilightbox-button.custom.disabled {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+.ilightbox-button.custom span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ilightbox-button.custom {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  left/*\**/: 45%\9;  /* IE7-8 */
+  right/*\**/: auto\9;  /* IE7-8 */
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  background: #fff;
+}
+.ilightbox-button.ilightbox-prev-button.custom {
+  top: 0;
+  bottom: auto;
+}
+.ilightbox-button.custom {
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+}
+.ilightbox-button.custom.horizontal {
+  right: 0;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  top/*\**/: 41%\9;  /* IE7-8 */
+  bottom/*\**/: auto\9;  /* IE7-8 */
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,.2);
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  border: none !important;
+}
+.ilightbox-button.ilightbox-prev-button.custom.horizontal {
+  right: auto;
+  left: 0;
+}
+.horizontal.ilightbox-button.ilightbox-next-button.custom:before {
+  content: '\2192';
+}
+.horizontal.ilightbox-button.ilightbox-prev-button.custom:before {
+  content: '\2190';
+}
+.ilightbox-button.ilightbox-next-button.custom:before {
+  content: '\2193';
+}
+.ilightbox-button.ilightbox-prev-button.custom:before {
+  content: '\2191';
+}
+
+
+.ilightbox-button.ilightbox-prev-button.custom {
+  top: 50%;
+  right: 0;
+  left: auto;
+  margin: 0 !important;
+  margin-top: -50px !important;
+  border-bottom: 1px solid #333;
+  background: rgba(0,0,0,.2);
+  color: #fff;
+}
+.ilightbox-button.ilightbox-next-button.custom {
+  top: 50%;
+  right: 0;
+  left: auto;
+  margin: 0 !important;
+  z-index: 1000000;
+  background: rgba(0,0,0,.2);
+  color: #fff;
+}
+
+
+
+
+
+.isMobile .ilightbox-toolbar.custom a.ilightbox-next-button:before {
+  font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  content: '\f105';
+  font-size: 16px;
+  line-height: 38px;
+}
+
+.isMobile .ilightbox-toolbar.custom a.ilightbox-prev-button:before {
+  font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  content: '\f104';
+  font-size: 16px;
+  line-height: 38px;
+}
+
